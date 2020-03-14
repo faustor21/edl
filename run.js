@@ -5,7 +5,6 @@ const samples = require('./lib/samples');
 const server = require('./lib/server');
 const electronDl = require('.');
 
-console.log(electronDl)
 electronDl();
 
 const argv = minimist(process.argv.slice(2));
