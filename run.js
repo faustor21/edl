@@ -27,9 +27,11 @@ const argv = minimist(process.argv.slice(2));
 		downloadThroughput: 1024 * 1024
 	});
 
-	const numSampleFiles = 'files' in argv ? argv.files : 5;
-	const files = await samples.setup(numSampleFiles);
-	await win.loadURL(`http://localhost:8080/index.html?files=${JSON.stringify(files)}`);
+	const numberSampleFiles = 'files' in argv ? argv.files : 5;
+	const files = await samples.setup(numberSampleFiles);
+	await win.loadURL(
+		`http://localhost:8080/index.html?files=${JSON.stringify(files)}`
+	);
 })();
 
 process.on('SIGINT', samples.teardown);

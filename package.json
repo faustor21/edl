@@ -3,16 +3,21 @@
 	"version": "3.1.1",
 	"description": "Simplified file downloads for your Electron app",
 	"license": "MIT",
-	"repository": "faustor21/edl",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:faustor21/edl.git"
+	},
 	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
-		"name": ["Sindre Sorhus"],
+		"name": [
+			"Sindre Sorhus"
+		],
 		"email": "sindresorhus@gmail.com",
 		"url": "sindresorhus.com"
 	},
 	"contributors": [
-    "Fausto Ramírez (https://github.com/faustor21)"
-  ],
+		"Fausto Ramírez (https://github.com/faustor21)"
+	],
 	"scripts": {
 		"//": "Enable tsd again when the Electron issue is fixed",
 		"start": "electron run.js",
@@ -30,17 +35,13 @@
 		"downloader",
 		"progress"
 	],
-	"repository": {
-		"type": "git",
-		"url": "git@github.com:faustor21/edl.git"
-	},	
 	"dependencies": {
 		"ext-name": "^5.0.0",
 		"pupa": "^2.0.1",
 		"unused-filename": "^2.1.0"
 	},
 	"devDependencies": {
-		"@types/node": "^13.1.4",
+		"@types/node": "^13.9.2",
 		"ava": "^3.5.0",
 		"cp-file": "^9.0.0",
 		"electron": "^8.1.1",
@@ -53,6 +54,10 @@
 		"xo": "^0.28.0"
 	},
 	"xo": {
+		"rules": {
+			"object-curly-spacing": 0,
+			"semi": 0
+		},
 		"envs": [
 			"node",
 			"browser"
